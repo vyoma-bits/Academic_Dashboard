@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Students</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        .trip {
+            border: 1px solid #ddd;
+            margin-bottom: 20px;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #fff;
+            transition: transform 0.3s ease-in-out;
+        }
+        .trip:hover {
+            transform: scale(1.05);
+        }
+        .trip h2 {
+            margin: 0;
+            color: #007BFF;
+        }
+        .trip h2 {
+            margin: 0;
+            color: #007BFF;
+        }
+    </style>
+</head>
+<body>
+    <h1>Your Students</h1>
+    
+    {%for i in students %}
+    <div class="trip">
+        {{i}}
+        <h2>{{i.username}}</h2>
+        <p>
+             {{i.name}}<br>
+         
+             <a href="{% url 'marks' i.username %}">Add Marks</a>
+        </p>
+    </div>
+    {%endfor%}
+
+    
+
+
+</body>
+</html>

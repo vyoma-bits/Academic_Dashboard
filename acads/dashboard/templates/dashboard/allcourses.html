@@ -1,0 +1,25 @@
+YOUR AVAILAIBLE COURSES
+{%if cdc%}
+cdcs
+{% for i in cdc%}
+<br>
+{{i.course_name}}
+<a href="{% url 'add_cart' i.pk %}">Add to your Course</a>
+{%endfor%}
+<br>
+{%endif%}
+{%if electives%}
+electives
+{% for j in electives%}
+<br>
+{{j.course_name}}
+<a href="{% url 'add_cart' j.pk %}">Add to your Course</a>
+{%endfor%}
+{%endif%}
+Your selected courses:
+{% for j in all%}
+<br>
+{{j.course_name}}
+
+{%endfor%}
+

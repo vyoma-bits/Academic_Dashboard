@@ -1,0 +1,11 @@
+YOUR ANNOUNCEMENTS
+{% for i in announcements %}
+<br>
+   
+    <br>
+    {{i.description}}
+    <br>
+    {{i.course.course_name}}
+    
+    <a href="{% url 'download' i.pk %}">Download Attachments</a>
+{% endfor %}

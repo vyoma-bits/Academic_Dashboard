@@ -1,0 +1,18 @@
+<h1>Edit Profile</h1>
+{%if dept %}
+YOUR DEPARTMENT:{{dept}}
+{%endif%}
+<form method="post">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="f_name" value={{data.first_name}}>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="l_name" value={{data.last_name}}>
+
+    <label for="bits_id">Bits Id:</label>
+    <input type="text" id="email" name="bits_id" value={{data.username}}>
+
+
+
+    <button type="submit">Submit</button>
+    {% csrf_token %}
+</form>
